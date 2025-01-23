@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Service(models.Model):
-    service_id = models.CharField(max_length=50, primary_key=True)
-    #service_id = models.CharField(max_length=50)
+    service_id = models.AutoField(primary_key=True)
+    service = models.CharField(max_length=50)
     monday = models.BooleanField()
     tuesday = models.BooleanField()
     wednesday = models.BooleanField()
@@ -19,7 +19,8 @@ class Service(models.Model):
         return self.service_id
     
 class Route(models.Model):
-    route_id = models.CharField(max_length=50, primary_key=True)
+    route_id = models.AutoField(primary_key=True)
+    route = models.CharField(max_length=50)
     agency_id = models.CharField(max_length=50)
     route_short_name = models.CharField(max_length=10)
     route_long_name = models.CharField(max_length=250)
@@ -30,7 +31,8 @@ class Route(models.Model):
         return self.route_id
 
 class Stop(models.Model):
-    stop_id = models.CharField(max_length=50, primary_key=True)
+    stop_id = models.AutoField(primary_key=True)
+    stop = models.CharField(max_length=50)
     #stop_code = models.CharField(max_length=50)
     stop_name = models.CharField(max_length=250)
     #stop_desc = models.CharField(max_length=250)
@@ -41,7 +43,8 @@ class Stop(models.Model):
         return self.stop_id
 
 class Shape(models.Model):
-    shape_id = models.CharField(max_length=50, primary_key=True)
+    shape_id = models.AutoField(primary_key=True)
+    shape = models.CharField(max_length=50)
     shape_pt_lat = models.FloatField()
     shape_pt_lon = models.FloatField()
     shape_pt_sequence = models.IntegerField()
@@ -50,9 +53,10 @@ class Shape(models.Model):
         return self.shape_id
 
 class Trip(models.Model):
+    trip_id = models.AutoField(primary_key=True)
     route_id = models.ForeignKey(Route, on_delete=models.CASCADE)
     service_id = models.ForeignKey(Service, on_delete=models.CASCADE)
-    trip_id = models.CharField(max_length=50, primary_key=True)
+    trip = models.CharField(max_length=50)
     #service_id = models.CharField(max_length=50)
     trip_headsign = models.CharField(max_length=50)
     shape_id = models.ForeignKey(Shape, on_delete=models.CASCADE)
