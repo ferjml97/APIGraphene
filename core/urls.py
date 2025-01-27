@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.schema import schema
+from .schema import schema
 from graphene_django.views import GraphQLView
 
 urlpatterns = [

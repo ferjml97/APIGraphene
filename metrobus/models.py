@@ -42,15 +42,15 @@ from django.db import models
 #     def __str__(self):
 #         return self.stop_id
 
-# class Shape(models.Model):
-#     id = models.AutoField(primary_key=True)
-#     shape_id = models.CharField(max_length=50)
-#     shape_pt_lat = models.FloatField()
-#     shape_pt_lon = models.FloatField()
-#     shape_pt_sequence = models.IntegerField()
+class Shape(models.Model):
+    id = models.AutoField(primary_key=True)
+    shape_id = models.CharField(max_length=50)
+    shape_pt_lat = models.FloatField()
+    shape_pt_lon = models.FloatField()
+    shape_pt_sequence = models.IntegerField()
 
-#     def __str__(self):
-#         return self.shape_id
+    def __str__(self):
+        return self.shape_id
 
 class Trip(models.Model):
     id = models.AutoField(primary_key=True)
