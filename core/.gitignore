@@ -1,0 +1,3 @@
+# Ignorar directorios de entornos virtuales
+venv/
+env/
