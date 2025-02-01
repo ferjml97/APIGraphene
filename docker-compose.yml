@@ -1,0 +1,10 @@
+services:
+  app:
+    image: ferjml97/metrobus-app:latest
+    build: .
+    container_name: django_metrobus-app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
