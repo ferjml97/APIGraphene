@@ -45,11 +45,11 @@ Después en sección >> Ver más >> [`Datos abiertos`](https://www.metrobus.cdmx
 Creación entorno virtual:
 
 ```python
-// python -m venv venv
+python -m venv venv
 ```
 
 ```python
-// .\venv\Scripts\activate
+.\venv\Scripts\activate
 ```
 {% endstep %}
 
@@ -57,15 +57,15 @@ Creación entorno virtual:
 [Instalación de librerías](#user-content-fn-1)[^1]
 
 ```sh
-// pip install geopy
+pip install geopy
 ```
 
 ```sh
-// pip install django
+pip install django
 ```
 
 ```sh
-// pip install graphene-django
+pip install graphene-django
 ```
 {% endstep %}
 
@@ -75,7 +75,7 @@ Creación entorno virtual:
 Limpieza
 
 ```
-// Some code
+Some code
 ```
 
 
@@ -85,7 +85,7 @@ Limpieza
 Creación del proyecto:
 
 ```django
-// django-admin startproject core . 
+django-admin startproject core . 
 ```
 {% endstep %}
 
@@ -93,7 +93,7 @@ Creación del proyecto:
 Creación de la app del proyecto:
 
 ```python
-// python manage.py startapp metrobus
+python manage.py startapp metrobus
 ```
 {% endstep %}
 
@@ -101,15 +101,15 @@ Creación de la app del proyecto:
 Migración de modelos de datos:
 
 ```python
-// python manage.py makemigrations
+python manage.py makemigrations
 ```
 
 ```python
-// python manage.py showmigrations
+python manage.py showmigrations
 ```
 
 ```python
-// python manage.py migrate  
+python manage.py migrate  
 ```
 {% endstep %}
 
@@ -117,7 +117,7 @@ Migración de modelos de datos:
 Creación de usuario de datos:
 
 ```python
-// python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 {% endstep %}
 
@@ -125,7 +125,7 @@ Creación de usuario de datos:
 Ejecutar servidor:
 
 ```python
-// python manage.py runserver
+python manage.py runserver
 ```
 
 
@@ -137,19 +137,19 @@ Ejecutar servidor:
 Login
 
 ```docker
-// docker login
+docker login
 ```
 
 Empaquetado&#x20;
 
 ```docker
-// docker build --tag ferjml97/metrobus-app:latest .
+docker build --tag ferjml97/metrobus-app:latest .
 ```
 
 Subir imagen
 
 ```docker
-// docker push ferjml97/metrobus-app:latest
+docker push ferjml97/metrobus-app:latest
 ```
 {% endstep %}
 {% endstepper %}
